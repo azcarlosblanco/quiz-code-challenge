@@ -3,12 +3,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../screens/home';
 import Quiz from "../screens/quiz";
-import { RootStackParamList, screenOptionstypes } from "../utils/types";
+import { RootStackParamList, ScreenOptionstypes } from "../utils/types";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
 const Navigation: React.FC<{}> = () => {
-  const navigatiorOptions: screenOptionstypes = { 
+  const navigatiorOptions: ScreenOptionstypes = { 
     headerShown: false
   };
 

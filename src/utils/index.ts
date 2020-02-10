@@ -1,10 +1,10 @@
 import theme from './theme';
 import api from './api';
-import types from './types';
+import * as types from './types';
 
 
 export {
-  theme,
-  api,
-  types
+    theme,
+    api,
+    types
 };

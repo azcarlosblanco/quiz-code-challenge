@@ -1,5 +1,4 @@
 import React from "react";
-import { StackNavigationProp } from '@react-navigation/stack';
 import { Block, Text, Button, SafeAreaBlock } from "../components";
 import { theme } from "../utils";
 import { NavidationProps } from "../utils/types";

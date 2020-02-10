@@ -1,4 +1,5 @@
 import { StackNavigationProp } from "@react-navigation/stack";
+import { GestureResponderEvent } from "react-native";
 
 export type BlockProps = {
     flex?: Number | Boolean;
@@ -32,7 +33,7 @@ export type ButtonProps = {
     locations?: number[]
     shadow?: Boolean
     style?: React.CSSProperties
-    onPress: () => void;
+    onPress: (answer: GestureResponderEvent) => void;
   }
 
 export type CardProps = {
@@ -83,7 +84,7 @@ export type RootStackParamList = {
     Quiz: undefined;
 };
   
-export type screenOptionstypes = {
+export type ScreenOptionstypes = {
     headerShown: boolean;
 };
   
@@ -98,3 +99,41 @@ type Point = {
     y: number;
 };
 
+export type ApiResponse = {
+	response_code: number;
+	results: Array<QuizSchema>;
+}
+
+export type QuizSchema = {
+	category: string;
+	question: string;
+	correct_answer: String;
+	incorrect_answers: Array<String>;
+}
+
+export enum QuizButtonAction {
+	TRUE = 'True',
+	FALSE = 'False',
+	PLAY_AGAIN = 'Play Again'
+}
+
+export type QuizState = {
+	quiz: Array<QuizSchema>;
+	selectedQuizId: number;
+	score: number;
+	correctAnswers: Array<CorrectAnswerSchema>;
+	setAnswer: (answer: QuizButtonAction) => void;
+	endQuiz: boolean;
+	fetchQuiz: () => void;
+	clearQuiz: () => void;
+}
+
+export type CorrectAnswerSchema = {
+	quizId: number;
+	submittedAnswer: String;
+}
+
+export type Action = {
+	type: string;
+	payload: any;
+}
