@@ -16,7 +16,6 @@ const Quiz: React.FC<NavidationProps> = ({ navigation }) => {
 		setAnswer,
 		endQuiz,
         fetchQuiz,
-        correctAnswers
     } = React.useContext(GameContext);
 
     React.useEffect(() => {
@@ -25,7 +24,7 @@ const Quiz: React.FC<NavidationProps> = ({ navigation }) => {
     
     React.useEffect(() => {
 		if (endQuiz) {
-            navigation.navigate('Home');
+            navigation.navigate('Results');
 		}
     }, [endQuiz]);
     

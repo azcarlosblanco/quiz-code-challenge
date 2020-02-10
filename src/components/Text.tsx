@@ -144,6 +144,9 @@ const styles = StyleSheet.create({
   black: {
       color: theme.colors.black
   },
+  danger: {
+    color: theme.colors.danger
+  },
   white: {
       color: theme.colors.white
   },

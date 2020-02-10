@@ -5,7 +5,7 @@ const colors = {
     tertiary: '#FFE358',
     success: '',
     warning: '',
-    danger: '',
+    danger: '#c8748f',
     black: '#323643',
     white: '#FFFFFF',
     gray: '#9DA3B4',

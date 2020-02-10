@@ -78,10 +78,10 @@ export type TypographyProps = {
     style?: React.CSSProperties
 }
 
-
 export type RootStackParamList = {
     Home: undefined;
     Quiz: undefined;
+    Results: undefined
 };
   
 export type ScreenOptionstypes = {
