@@ -1,5 +1,5 @@
 import React from "react";
-import { Block, Text, Button, Card } from "../components";
+import { Block, Text, Button, Card, SafeAreaBlock } from "../components";
 import { theme } from "../utils";
 import { AllHtmlEntities } from 'html-entities';
 import { GameContext } from "../context/context";
@@ -30,7 +30,8 @@ const Results = ({ navigation }) => {
             return (
                 <Card middle key={index} margin={[0, 0, theme.sizes.padding / 3]}>
                     <Text title color={color}>
-                        <Text bold h2 color={color}>{correctAnswersKeys.includes(index) ? '+': '-'}</Text> {entities.decode(quiz.question)}
+                        <Text bold h2 color={color}>{correctAnswersKeys.includes(index) ? '+': '-'}</Text>
+                        {" "} {entities.decode(quiz.question)}
                     </Text>
                 </Card>
             )
@@ -38,7 +39,7 @@ const Results = ({ navigation }) => {
     }
 
     return (
-        <Block>
+        <SafeAreaBlock>
             <Block center middle flex={0.3}>
                 <Text h1 center bold>
                     You scored
@@ -59,7 +60,7 @@ const Results = ({ navigation }) => {
                     </Text>
                 </Button>   
             </Block>
-        </Block>
+        </SafeAreaBlock>
     )
 }
 
