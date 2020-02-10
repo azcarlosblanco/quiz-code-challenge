@@ -2,14 +2,8 @@ import React from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../screens/home';
-
-export type RootStackParamList = {
-  Home: undefined;
-};
-
-type screenOptionstypes = {
-  headerShown: boolean;
-};
+import Quiz from "../screens/quiz";
+import { RootStackParamList, screenOptionstypes } from "../utils/types";
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -20,8 +14,9 @@ const Navigation: React.FC<{}> = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={navigatiorOptions} initialRouteName="Home">
+      <Stack.Navigator screenOptions={navigatiorOptions} initialRouteName="Quiz">
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Quiz" component={Quiz} />
       </Stack.Navigator>
     </NavigationContainer>
   );

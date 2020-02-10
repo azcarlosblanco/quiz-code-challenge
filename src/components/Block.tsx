@@ -1,28 +1,8 @@
 import React from "react";
 import { StyleSheet, View, Animated } from "react-native";
-import { theme } from "../constants";
+import { theme } from "../utils";
+import { BlockProps } from "../utils/types";
 
-type BlockProps = {
-  flex?: Number | Boolean
-  row?: Boolean
-  column?: Boolean
-  center?: Boolean
-  middle?: Boolean
-  left?: Boolean
-  right?: Boolean
-  top?: Boolean
-  bottom?: Boolean
-  card?: Boolean
-  shadow?: Boolean
-  color?: String | Number
-  space?: String
-  padding?: Number | Object
-  margin?: Number | Object
-  animated?: Boolean
-  wrap?: Boolean
-  style?: React.CSSProperties
-}
-  
 const Block: React.FC<BlockProps> = ({
   flex,
   row,
@@ -88,7 +68,7 @@ const Block: React.FC<BlockProps> = ({
           };
       }
     }
-  }
+  };
 
   const handlePaddings = () => {
     if (typeof padding === "number") {
@@ -133,7 +113,7 @@ const Block: React.FC<BlockProps> = ({
           };
       }
     }
-  }
+  };
 
   const blockStyles = [
     styles.block,
@@ -158,7 +138,6 @@ const Block: React.FC<BlockProps> = ({
     style // rewrite predefined styles
   ];
 
-
   if (animated) {
     return (
       <Animated.View style={blockStyles} {...props}>
@@ -172,7 +151,7 @@ const Block: React.FC<BlockProps> = ({
       {children}
     </View>
   );
-}
+};
 
 export const styles = StyleSheet.create({
   block: {

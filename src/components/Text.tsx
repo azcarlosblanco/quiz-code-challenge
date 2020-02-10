@@ -1,42 +1,7 @@
 import React, { Component } from "react";
 import { Text, StyleSheet } from "react-native";
-
-import { theme } from "../constants";
-
-
-type TypographyProps = {
-  h1?: Boolean
-  h2?: Boolean
-  h3?: Boolean
-  title?: Boolean
-  body?: Boolean
-  caption?: Boolean
-  small?: Boolean
-  size?: Number
-  transform?: String
-  align?: String
-  regular?: Boolean
-  bold?: Boolean
-  semibold?: Boolean
-  medium?: Boolean
-  weight?: Number | String
-  light?: Boolean
-  center?: Boolean
-  right?: Boolean
-  spacing?: String
-  height?: Number
-  color?: String
-  accent?: Boolean
-  primary?: Boolean
-  secondary?: Boolean
-  tertiary?: Boolean
-  black?: Boolean
-  white?: Boolean
-  gray?: Boolean
-  gray2?: Boolean
-  style?: React.CSSProperties
-}
-  
+import { theme } from "../utils";  
+import { TypographyProps } from "../utils/types";
 
 const Typography: React.FC<TypographyProps>  = ({
   h1,

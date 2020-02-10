@@ -1,21 +1,8 @@
 import React from "react";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { theme } from "../constants";
-
-type ButtonProps = {
-  opacity?: Number
-  gradient?: Boolean
-  color?: String
-  startColor?: String
-  endColor?: String
-  end?: Object
-  start?: Object
-  locations?: Object
-  shadow?: Boolean
-  style?: React.CSSProperties
-  onPress: () => void;
-}
+import { theme } from "../utils";
+import { ButtonProps } from "../utils/types";
 
 const Button: React.FC<ButtonProps> = ({
   style,

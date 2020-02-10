@@ -1,16 +1,10 @@
 import React from "react";
 import { StackNavigationProp } from '@react-navigation/stack';
 import { Block, Text, Button, SafeAreaBlock } from "../components";
-import { theme } from "./../constants";
-import { RootStackParamList } from "../navigation";
+import { theme } from "../utils";
+import { NavidationProps } from "../utils/types";
 
-type ProfileScreenNavigationProp = StackNavigationProp<RootStackParamList>;
-
-type HomeProps = {
-  navigation: ProfileScreenNavigationProp;
-};
-
-const Home: React.FC<HomeProps> = ({ navigation }) => {    
+const Home: React.FC<NavidationProps> = ({ navigation }) => {    
     return (
         <SafeAreaBlock>
             <Block center middle>
@@ -29,7 +23,7 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
                 </Text>
             </Block>
             <Block middle flex={0.5} margin={[0, theme.sizes.padding * 2]}>
-                <Button gradient onPress={() => navigation.navigate('Home')}>
+                <Button gradient onPress={() => navigation.navigate('Quiz')}>
                     <Text center semibold white>
                         Begin
                     </Text>
