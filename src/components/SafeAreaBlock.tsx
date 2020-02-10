@@ -8,10 +8,10 @@ const SafeAreaBlock: React.FC<SafeAreaBlockProps | BlockProps> = ({ style, child
     
     return (
         <Block 
-        padding={[safeAreaInsets.top, safeAreaInsets.left, safeAreaInsets.bottom, safeAreaInsets.right]} 
-        style={style}
-        {...props}>
-            {children}
+            padding={[safeAreaInsets.top, safeAreaInsets.left, safeAreaInsets.bottom, safeAreaInsets.right]} 
+            style={style}
+            {...props}>
+                {children}
         </Block>
     );
 }

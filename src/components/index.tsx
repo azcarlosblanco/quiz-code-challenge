@@ -5,9 +5,9 @@ import SafeAreaBlock from './SafeAreaBlock';
 import Card from './Card';
 
 export {
-  Block,
-  Text,
-  Button,
-  SafeAreaBlock,
-  Card
+    Block,
+    Text,
+    Button,
+    SafeAreaBlock,
+    Card
 };

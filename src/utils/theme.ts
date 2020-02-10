@@ -10,15 +10,15 @@ const colors = {
     white: '#FFFFFF',
     gray: '#9DA3B4',
     gray2: '#C5CCD6',
-  };
+};
   
-  const sizes = {
+const sizes = {
     // global sizes
     base: 16,
     font: 14,
     radius: 6,
     padding: 25,
-  
+
     // font sizes
     h1: 26,
     h2: 20,
@@ -28,33 +28,33 @@ const colors = {
     body: 14,
     caption: 12,
     small: 8
-  };
+};
   
-  const fonts = {
+const fonts = {
     h1: {
-      fontSize: sizes.h1
+        fontSize: sizes.h1
     },
     h2: {
-      fontSize: sizes.h2
+        fontSize: sizes.h2
     },
     h3: {
-      fontSize: sizes.h3
+        fontSize: sizes.h3
     },
     header: {
-      fontSize: sizes.header
+        fontSize: sizes.header
     },
     title: {
-      fontSize: sizes.title
+        fontSize: sizes.title
     },
     body: {
-      fontSize: sizes.body
+        fontSize: sizes.body
     },
     caption: {
-      fontSize: sizes.caption
+        fontSize: sizes.caption
     },
     small: {
-      fontSize: sizes.small
+        fontSize: sizes.small
     }
-  };
+};
   
-  export default { colors, sizes, fonts };
+export default { colors, sizes, fonts };
